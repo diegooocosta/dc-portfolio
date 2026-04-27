@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Costa — Portfolio</title>
+  <meta name="description"
+    content="Portfolio de projetos de Diego Costa. Engenharia de dados, visualização de dados e automação." />
+  <meta name="theme-color" content="#0a0a0f" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Particle Background (Antigravity-style) -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <div class="content-wrapper">
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header">
+      <div class="container header-inner">
+        <a href="#" class="site-logo">diego<span>.costa</span></a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#projects">projetos</a></li>
+            <li><a href="#contact">contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="social-links">
+          <!-- GitHub -->
+          <a href="https://github.com/diegooocosta" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/indiegocosta/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <span class="hero-label">portfolio</span>
+        <h1>Construindo soluções com dados e inteligência real e artificial</h1>
+        <p>
+          O futuro dos dados não é apenas armazenar, mas sim tornar a informação
+          "conversável" e inteligente.
+        </p>
+        <a href="#projects" class="hero-cta">
+          ver projetos
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <polyline points="19 12 12 19 5 12" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">01 — Trabalhos</p>
+          <h2 class="section-title">Projetos demonstrativos em destaque</h2>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- PROJECT 01 — Crime Radar -->
+          <article class="project-card" id="project-crime-radar">
+            <div class="project-image-wrapper">
+              <img src="assets/images/crime-radar.png"
+                alt="Dashboard do Radar da Criminalidade do Estado de São Paulo mostrando mapa interativo com marcadores de crimes"
+                loading="lazy" />
+              <div class="project-image-overlay"></div>
+            </div>
+
+            <div class="project-info">
+              <p class="project-number">01</p>
+              <h3 class="project-name">Radar da Criminalidade de SP</h3>
+              <p class="project-description">
+                Dashboard interativo que visualiza dados reais de criminalidade do
+                Estado de São Paulo (Registros de 2025), classificados por tipo de crime em um mapa
+                que permite navegação por cidades.
+              </p>
+
+              <div class="project-detail">
+                <h4 class="project-detail-title">Arquitetura</h4>
+                <p>
+                  Aplicação web construída com Streamlit, utilizando um pipeline de dados
+                  que processa bases públicas de segurança do Estado de SP. Os dados são
+                  limpos, categorizados e georreferenciados para exibição em um mapa
+                  interativo com camadas por tipo de crime.
+                </p>
+              </div>
+
+              <div class="project-detail">
+                <h4 class="project-detail-title">Detalhes Técnicos</h4>
+                <p>
+                  Os dados são processados com Pandas para limpeza e agrupamento.
+                  A visualização usa Folium para renderizar o mapa com marcadores
+                  categorizados por cores. Filtros dinâmicos permitem selecionar
+                  cidades e tipos de crime em tempo real.
+                </p>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Folium</span>
+                <span class="tech-tag">Data Viz</span>
+              </div>
+
+              <a href="https://github.com/diegooocosta" class="project-link" target="_blank" rel="noopener noreferrer">
+                Ver no GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 02 — File Move -->
+          <article class="project-card reverse" id="project-file-move">
+            <div class="project-image-wrapper">
+              <img src="assets/images/file-move.png"
+                alt="Interface do App File Move mostrando sincronização entre duas nuvens de armazenamento"
+                loading="lazy" />
+              <div class="project-image-overlay"></div>
+            </div>
+
+            <div class="project-info">
+              <p class="project-number">02</p>
+              <h3 class="project-name">App File Move</h3>
+              <p class="project-description">
+                Ferramenta de automação que sincroniza arquivos automaticamente entre
+                pastas, mantendo duas nuvens de armazenamento atualizadas sem
+                necessidade de intervenção manual.
+              </p>
+
+              <div class="project-detail">
+                <h4 class="project-detail-title">Arquitetura</h4>
+                <p>
+                  Aplicação desktop que monitora diretórios em tempo real usando
+                  observadores de sistema de arquivos. Quando um arquivo é criado
+                  ou modificado em uma pasta de origem, ele é automaticamente
+                  replicado para o destino, mantendo a estrutura de diretórios.
+                </p>
+              </div>
+
+              <div class="project-detail">
+                <h4 class="project-detail-title">Detalhes Técnicos</h4>
+                <p>
+                  Utiliza a biblioteca Watchdog para monitoramento de eventos no
+                  sistema de arquivos. O processo roda em background como um serviço,
+                  com tratamento de conflitos e logging de todas as operações
+                  para auditoria.
+                </p>
+              </div>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Watchdog</span>
+                <span class="tech-tag">Automação</span>
+                <span class="tech-tag">File System</span>
+              </div>
+
+              <a href="https://github.com/diegooocosta" class="project-link" target="_blank" rel="noopener noreferrer">
+                Ver no GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="contact">
+      <div class="container footer-inner">
+        <p class="footer-text">&copy; 2026 Diego Costa</p>
+        <div class="footer-links">
+          <a href="https://github.com/diegooocosta" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/indiegocosta/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /content-wrapper -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
